@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <a href="./index.html"><h1 class="logo1">CrunchyBites</h1></a>
+    </div>
+    <ul class="menu-list ">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="./wishlist.html">Wishlist</a></li>
+        <li><a href="./cart.html">MyCart</a></li>
+    </ul>
+   <input placeholder="Search Items" class="srch"><button class="srch-btn">Search</button>
+        
+    </div>
+    <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+</nav>
+<div class="sidebar">
+    <header>
+      <div class="close-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="item">
+        <a href="" class="sub-btn" data-container="toggle-1">AVAILABLE ITEMS</a>
+        <div class="sub-menu" id="toggle-1">
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Nendran Banana Chips</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Potato Chips</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Sesame Candy</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black; margin-left: -15px;">Coconut Oil</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black; margin-left: -15px;">peanut candy</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Jaggery</a>
+        </div>
+      </div>
+      <div class="item2">
+        <a href="" class="sub-btn" data-container="toggle-2">MENU </a>
+        <div class="sub-menu" id="toggle-2">
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Home</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">About</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Products</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Gift Boxes</a>
+
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Contact</a>
+          <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="carosel">
+        <center>
+        <img src="./healthy-snacking.jpg" alt="" class="advertise"></center>
+      </div><br><br>
+      <center>
+      <h1>SHOP BY</h1></center>
+      <div class="border-snacks">
+        <img src="./chips.jpeg" alt="" class="borderimg1">
+        <img src="./nanthra chips.jpeg" alt="" class="borderimg2">
+        <img src="./thin chips.jpeg" alt="" class="borderimg3">
+        <img src="./kadalaimittai.jpeg" alt="" class="borderimg4">
+        <img src="./orangemittai.jpeg" alt="" class="borderimg5">
+      </div><br><br>
+  <div class="container">
+    <div class="slider-wrapper">
+      <button id="prev-slide" class="slide-button material-symbols-rounded">Chevron_left</button>
+      <div class="image-list">
+        <img src="./nanthra chips.jpeg" alt="" class="image-item">
+        <img src="./thin chips.jpeg" alt="" class="image-item">
+        <img src="./castor oil.jpg" alt="" class="image-item">
+        <img src="./kadalaimittai.jpeg" alt="" class="image-item">
+        <img src="./chips.jpeg" alt="" class="image-item">
+        <img src="./pure ghee.jpg" alt="" class="image-item">
+        <img src="./neem oil.jpg" alt="" class="image-item">
+        <img src="./orangemittai.jpeg" alt="" class="image-item">
+        <img src="./muruku.jpg" alt="" class="image-item">
+        <img src="./pottukadalai.jpg" alt="" class="image-item">
+      </div>
+      <button id="next-slide" class="slide-button material-symbols-rounded">Chevron_right</button>
+    </div>
+    <div class="slider-scrollbar">
+      <div class="scrollbar-track">
+        <div class="scrollbar-thumb"></div>
+      </div>
+    </div>
+  </div><br><br>
+  <center>
+  <h2>Discover the joy in every bite.</h2><br>
+  <p style="font-size: 25px; font-weight: 600; color: blue;">"Experience this offer, available for tonight only!"</p></center>
+  <div class="muchmore">
+    <div class="mainimg">
+      <img src="./nanthra chips.jpeg" alt="Nandra Banana Chips">
+      <img src="./nendra chips packet.jpeg" alt="" class="img2">
+      <center>
+        <h3>Nandra Banana Chips</h3>
+        <h3 style="font-size: 17px; color: blue;">"Experience the authentic taste of Kerala."</h3>
+        <p>Rs 75 <span style="text-decoration: line-through;">Rs.80</span></p>
+      </center>
+      <div class="quantity-controls">
+        <center>
+          <button class="decrease-qty">-</button>
+          <input type="text" class="quantity" value="1" readonly>
+          <button class="increase-qty">+</button>
+        </center>
+      </div>
+      <center><br>
+        <button class="addtocart" onclick="addToWishlistFromElement(this)">Add to Wishlist</button>
+      </center>
+    </div>
+    <div class="mainimg1">
+      <img src="./chips.jpeg" alt="">
+      <img src="./potato chips packed.jpeg" alt="Potato Chips" class="img4">
+      <center>
+        <h3>Potato Chips</h3>
+        <h3 style="font-size: 17px; color: blue;">"Crunchy, addictive goodness."</h3>
+      <p>Rs 50 <span style="text-decoration: line-through;">Rs.60</span></p></center>
+      <div class="quantity-controls"><center>
+
+        <button class="decrease-qty">-</button>
+        <input type="text" class="quantity" value="1" readonly>
+        <button class="increase-qty">+</button>
+      </div></center>
+      <center><br>
+        <button class="addtocart" onclick="addToWishlistFromElement(this)">Add to Wishlist</button>
+      </center>
+    </div>
+    <div class="mainimg2">
+      <img src="./thin chips.jpeg" alt="">
+      <img src="./thin chips packed.jpeg" alt="Tapioca Sticks" class="img6">
+      <center>
+        <h3>Tapioca Sticks</h3>
+        <h3 style="font-size: 17px; color: blue;">"Snack like you mean it."</h3>
+      <p>Rs 70 <span style="text-decoration: line-through;">Rs.80</span></p></center>
+      <div class="quantity-controls"><center>
+        <button class="decrease-qty">-</button>
+        <input type="text" class="quantity" value="1" readonly>
+        <button class="increase-qty">+</button>
+      </div></center>
+      <center><br>
+        <button class="addtocart" onclick="addToWishlistFromElement(this)">Add to Wishlist</button>
+      </center>
+    </div>
+    <div class="mainimg3">
+      <img src="./muruku.jpg" alt="">
+      <img src="./muruku packed.jpg" alt="Murukku" class="img8">
+      <center>
+        <h3>Murukku( savory )</h3>
+        <h3 style="font-size: 17px; color: blue;">"Bold spices, unforgettable taste."</h3>
+      <p>Rs 50 <span style="text-decoration: line-through;">Rs.60</span></p></center>
+      <div class="quantity-controls">
+        <button class="decrease-qty">-</button>
+        <input type="text" class="quantity" value="1" readonly>
+        <button class="increase-qty">+</button>
+      </div>
+      <center><br>
+        <button class="addtocart" onclick="addToWishlistFromElement(this)">Add to Wishlist</button>
+      </center>
+    </div>
+  </div>
+
+
+
+      
+      <br><br>
+    <center><h1>Food & Safety</h1></center><br>
+    <div class="foodsafety">
+        <div class="saflogo">
+            <center>
+            <a href="./index.html"><h1 class="logo2">CrunchyBites</h1></a></center>
+        </div>
+        <div class="saf2">
+         <p class="para4"><span class="color">C</span>runchyBites is always thinking about your health & environment. 
+            We don't just put together a box of snacks; we follow a meticulous list of check and balances 
+            to ensure that our snacks match high standards of quality and taste. We strictly use
+             100% Recyclable Standup Ziplock Pouches with Silver Foil inside. These packets protect the snacks 
+             from coming into contact with air or dust, thereby increasing the shelf life of our snacks.</p>
+        </div>
+    </div>
+    
+    <div class="mainbestsellers" >
+      <div class="bestsellers">
+       <a href="" style="text-decoration-color: black;"> <h2 style="color: black;">Best Sellers</h2></a>
+        <div class="bestsell1">
+          <img src="./castor oil.jpg" alt="" class="img20">
+          <div class="bestpara1" style="margin-top: 40px;">
+            <h3 style="font-size: 16px;">Castor Oil</h3>
+            <p style="font-size: 16px;">Rs. 500 <span style="text-decoration: line-through; font-size: 16px; ">Rs.550</span></p>
+          </div>
+        </div><br>
+        <div class="bestsell2">
+          <img src="./neem oil.jpg" alt="" class="img21">
+          <div class="bestpara2" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Neem Oil</h3>
+          <p style="font-size: 16px;">Rs. 600 <span style="text-decoration: line-through; font-size: 16px;">Rs 650</span></p>
+        </div>
+        </div><br>
+        <div class="bestsell3">
+          <img src="./groundnut oil.jpg" alt="" class="img22">
+          <div class="bestpara3" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Groundnut Oil</h3>
+          <p style="font-size: 16px;">Rs. 400 <span style="text-decoration: line-through; font-size: 16px;">Rs.450</span></p>
+        </div>
+        </div><br>
+        <div class="bestsell4">
+          <img src="./jagerry.jpg" alt="" class="img23">
+          <div class="bestpara4" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Jaggery</h3>
+          <p style="font-size: 16px;">Rs. 300 <span style="text-decoration: line-through; font-size: 16px;">Rs.350</span></p>
+        </div>
+        </div>
+      </div>
+      <div class="snacks">
+       <a href="" style="text-decoration-color: black;"> <h2 style="color: black;">Snacks</h2></a>
+        <div class="bestsell5">
+          <img src="./nanthra chips.jpeg" alt="" class="img24">
+          <div class="bestpara5" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Nanthra Chips</h3>
+          <p style="font-size: 16px;">Rs. 75 <span style="text-decoration: line-through; font-size: 16px;">Rs.80</span></p>
+        </div>
+        </div><br>
+        <div class="bestsell6">
+          <img src="./chips.jpeg" alt="" class="img25">
+          <div class="bestpara6" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Potato Chips</h3>
+          <p style="font-size: 16px;">Rs. 50 <span style="text-decoration: line-through; font-size: 16px;">Rs.60</span></p>
+        </div>
+        </div><br>
+        <div class="bestsell7">
+          <img src="./thin chips.jpeg" alt="" class="img26">
+          <div class="bestpara7" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Tapioca Sticks</h3>
+          <p style="font-size: 16px;">Rs. 70 <span style="text-decoration: line-through; font-size: 16px;">Rs.80</span></p>
+        </div>
+        </div><br>
+        <div class="bestsell8">
+          <img src="./muruku.jpg" alt="" class="img27">
+          <div class="bestpara" style="margin-top: 40px;">
+          <h3 style="font-size: 16px;">Murukku</h3>
+          <p style="font-size: 16px;">Rs. 50 <span style="text-decoration: line-through; font-size: 16px;">Rs.60</span></p>
+        </div>
+        </div>
+      </div>
+    </div><br>
+    <center><h1>We are also Available On</h1></center><br><br>
+    <div class="availableon"><br>
+        <img src="./zomato logo.jpg" alt="" class="img10" style="width: 200px; height: 200px;">
+       <br><br>
+        <img src="./Swiggy_logo.png" alt="" class="img11" style="width: 200px; height: 200px;" >
+    </div><br><br>
+    <div class="viplist">
+      <div class="logo">
+        <a href="./index.html"><h1 class="logo1">CrunchyBites</h1></a>
+      </div>
+      <div class="vip">
+        <p>Join as a member in your shop</p>
+      </div>
+      <div class="mail">
+      <input type="email" name="" id="" placeholder="Enter the mail id" class="input"><button class="sub">Subscribe</button>
+    </div>
+    </div>
+      <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-column">
+                <h3>About Popchips</h3>
+                <ul style="display: flex; flex-direction: column; ">
+                    <li><a href="#" >Our Story</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul style="display: flex; flex-direction: column;">
+                    <li><a href="#">Original</a></li>
+                    <li><a href="#">Ridges</a></li>
+                    <li><a href="#">Nutter Puffs</a></li>
+                    <li><a href="#">Veggie Chips</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Flavors</h3>
+                <ul  style="display: flex; flex-direction: column;">
+                    <li><a href="#">Sea Salt</a></li>
+                    <li><a href="#">BBQ</a></li>
+                    <li><a href="#">Sour Cream & Onion</a></li>
+                    <li><a href="#">Buffalo Ranch</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Support</h3>
+                <ul  style="display: flex; flex-direction: column;">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect with Us</h3>
+                <ul class="social-media-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <p>Subscribe to our newsletter for updates!</p>
+                <form class="newsletter-form">
+                    <input type="email" name="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Popchips. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+      <div class="nav2">
+        <a href="./user.html" class="nav-link">
+          <center>
+          <i class="fa-brands fa-shopify nav-icon"></i><br>
+          <span class="nav-text">Shop</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+          <i class="fa-solid fa-arrow-up-short-wide nav-icon"></i><br>
+          <span class="nav-text">Filter</span></center>
+        </a>
+        <a href="./wishlist.html" class="nav-link">
+          <center>
+          <i class="fa-regular fa-heart nav-icon"></i><br>
+          <span class="nav-text">Wishlist</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+          <i class="fa-solid fa-cart-shopping nav-icon"></i><br>
+          <span class="nav-text">Cart</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+            <i class="fa-solid fa-user"></i><br>
+          <span class="nav-text">Account</span></center>
+        </a>
+      </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+    var sidebar = document.querySelector(".sidebar");
+    var subBtns = document.querySelectorAll(".sub-btn");
+
+    menuBtn.addEventListener("click", function() {
+        sidebar.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", function() {
+        sidebar.classList.remove("active");
+    });
+
+    subBtns.forEach(function(btn) {
+        btn.addEventListener("click", function(event) {
+            event.preventDefault();
+            var containerId = this.getAttribute("data-container");
+            var subMenu = document.getElementById(containerId);
+
+            if (subMenu.style.display === "block") {
+                subMenu.style.display = "none";
+            } else {
+                subMenu.style.display = "block";
+            }
+        });
+    });
+});
+function addToWishlist(productName, price, imageSrc, quantity) {
+
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+  
+    wishlist.push({ name: productName, price: price, imageSrc: imageSrc, quantity: quantity });
+
+    
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+    
+    window.location.href = 'wishlist.html';  
+}
+
+function addToWishlistFromElement(buttonElement) {
+    
+    const productDiv = buttonElement.closest('.muchmore');
+
+    
+    const productContainer = buttonElement.closest('.mainimg, .mainimg1, .mainimg2, .mainimg3');
+
+    
+    const productName = productContainer.querySelector('h3').textContent.trim(); 
+    const price = parseFloat(productContainer.querySelector('p').textContent.replace(/[^0-9.]/g, ''));
+    const imageSrc = productContainer.querySelector('img').src;
+    const quantity = parseInt(productContainer.querySelector('.quantity').value, 10);
+
+    
+    addToWishlist(productName, price, imageSrc, quantity);
+}
+
+
+function removeItemFromWishlist(index) {
+  
+  let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+
+  wishlist.splice(index, 1);
+
+  
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+  
+  location.reload();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+        const elementsToObserve = document.querySelectorAll('.mainimg, .mainimg1, .mainimg2, .mainimg3');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elementsToObserve.forEach(element => observer.observe(element));
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const elementsToObserve = document.querySelectorAll('.mainimg, .mainimg1, .mainimg2, .mainimg3, .borderimg1, .borderimg2, .borderimg3, .borderimg4, .borderimg5');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elementsToObserve.forEach(element => observer.observe(element));
+    });
+    const initSlider = () => {
+  const imageList = document.querySelector(".slider-wrapper .image-list");
+  const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+  const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+  const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+  const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+  scrollbarThumb.addEventListener("mousedown", (e) => {
+    const startX = e.clientX;
+    const thumbPosition = scrollbarThumb.offsetLeft;
+
+    const handleMouseMove = (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = Math.min(Math.max(thumbPosition + deltaX, 0), sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+      scrollbarThumb.style.left = `${newThumbPosition}px`;
+
+      const scrollPercentage = newThumbPosition / (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+      imageList.scrollLeft = scrollPercentage * maxScrollLeft;
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  });
+
+  slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const direction = button.id === "prev-slide" ? -1 : 1;
+      const scrollAmount = imageList.clientWidth * direction;
+      imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
+
+  const handleSlideButtons = () => {
+    slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
+    slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+  };
+
+  const updateScrollThumbPosition = () => {
+    const scrollPosition = imageList.scrollLeft;
+    const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+    scrollbarThumb.style.left = `${thumbPosition}px`;
+  };
+
+  imageList.addEventListener("scroll", () => {
+    handleSlideButtons();
+    updateScrollThumbPosition();
+  });
+
+  
+  handleSlideButtons();
+  updateScrollThumbPosition();
+};
+function increaseQuantity(button) {
+  const quantityInput = button.parentElement.querySelector('.quantity');
+  let quantity = parseInt(quantityInput.value, 10);
+  quantityInput.value = quantity + 1;
+}
+
+
+function decreaseQuantity(button) {
+  const quantityInput = button.parentElement.querySelector('.quantity');
+  let quantity = parseInt(quantityInput.value, 10);
+  if (quantity > 1) {
+    quantityInput.value = quantity - 1;
+  }
+}
+
+
+document.querySelectorAll('.increase-qty').forEach(button => {
+  button.addEventListener('click', () => increaseQuantity(button));
+});
+
+document.querySelectorAll('.decrease-qty').forEach(button => {
+  button.addEventListener('click', () => decreaseQuantity(button));
+});
+
+    document.querySelectorAll('.addtocart').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Added to Wishlist!');
+        
+      });
+    });
+window.addEventListener("load", initSlider);
+
+
+      </script>         
+</body>
+</html>

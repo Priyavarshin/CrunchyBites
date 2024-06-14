@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="./index.html"><h1 class="logo1">CrunchyBites</h1></a>
+        </div>
+        <ul class="menu-list ">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="./cart.html">MyCart</a></li>
+        </ul>
+       <input placeholder="Search Items" class="srch"><button class="srch-btn">Search</button>
+            
+        </div>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+    </nav>
+    <div class="sidebar">
+        <header>
+          <div class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </header>
+        <div class="menu">
+          <div class="item">
+            <a href="" class="sub-btn" data-container="toggle-1">AVAILABLE ITEMS</a>
+            <div class="sub-menu" id="toggle-1">
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Nendran Banana Chips</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Potato Chips</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Sesame Candy</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black; margin-left: -15px;">Coconut Oil</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black; margin-left: -15px;">peanut candy</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Jaggery</a>
+            </div>
+          </div>
+          <div class="item2">
+            <a href="" class="sub-btn" data-container="toggle-2">MENU </a>
+            <div class="sub-menu" id="toggle-2">
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Home</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">About</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Products</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Gift Boxes</a>
+    
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">Contact</a>
+              <a href="" class="sub-item" style="letter-spacing: 2px; font-size: 18px; color: black;">search</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="wishlist-container">
+        <h1 class="wishlist-title">Your Wishlist</h1>
+        <div id="wishlist"></div>
+    </div>
+    
+  
+    <div class="nav2">
+        <a href="./user.html" class="nav-link">
+          <center>
+          <i class="fa-brands fa-shopify nav-icon"></i><br>
+          <span class="nav-text">Shop</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+          <i class="fa-solid fa-arrow-up-short-wide nav-icon"></i><br>
+          <span class="nav-text">Filter</span></center>
+        </a>
+        <a href="./wishlist.html" class="nav-link">
+          <center>
+          <i class="fa-regular fa-heart nav-icon"></i><br>
+          <span class="nav-text">Wishlist</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+          <i class="fa-solid fa-cart-shopping nav-icon"></i><br>
+          <span class="nav-text">Cart</span></center>
+        </a>
+        <a href="" class="nav-link">
+          <center>
+            <i class="fa-solid fa-user"></i><br>
+          <span class="nav-text">Account</span></center>
+        </a>
+      </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+    var sidebar = document.querySelector(".sidebar");
+    var subBtns = document.querySelectorAll(".sub-btn");
+
+    if (menuBtn) {
+        menuBtn.addEventListener("click", function() {
+            sidebar.classList.add("active");
+        });
+    } else {
+        console.error('Menu button not found');
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function() {
+            sidebar.classList.remove("active");
+        });
+    } else {
+        console.error('Close button not found');
+    }
+
+    if (subBtns.length > 0) {
+        subBtns.forEach(function(btn) {
+            btn.addEventListener("click", function(event) {
+                event.preventDefault();
+                var containerId = this.getAttribute("data-container");
+                var subMenu = document.getElementById(containerId);
+
+                if (subMenu) {
+                    if (subMenu.style.display === "block") {
+                        subMenu.style.display = "none";
+                    } else {
+                        subMenu.style.display = "block";
+                    }
+                } else {
+                    console.error('Submenu container not found');
+                }
+            });
+        });
+    } else {
+        console.error('Sub buttons not found');
+    }
+
+    let wishlist = [];
+    try {
+        wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    } catch (error) {
+        console.error('Error parsing wishlist items from localStorage:', error);
+    }
+    const wishlistContainer = document.getElementById('wishlist');
+
+    function removeItemFromWishlist(index) {
+        wishlist.splice(index, 1);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        location.reload();
+    }
+
+    function addtocartFunction(index) {
+        let wishlist = [];
+        try {
+            wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        } catch (error) {
+            console.error('Error parsing wishlist items from localStorage:', error);
+            return;
+        }
+
+        const selectedItem = wishlist[index];
+
+        if (!selectedItem) {
+            console.error('Selected item not found in wishlist');
+            return;
+        }
+
+        let cart = [];
+        try {
+            cart = JSON.parse(localStorage.getItem('cart')) || [];
+        } catch (error) {
+            console.error('Error parsing cart items from localStorage:', error);
+        }
+        cart.push(selectedItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        wishlist.splice(index, 1);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        window.location.href = 'cart.html';
+    }
+
+    if (wishlistContainer) {
+        if (wishlist.length === 0) {
+            wishlistContainer.textContent = 'Your wishlist is empty.';
+        } else {
+            wishlist.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'wishlist-item';
+
+                const imageElement = document.createElement('img');
+                imageElement.src = item.imageSrc;
+                imageElement.alt = item.name;
+                imageElement.className = 'wishlist-image';
+                itemElement.appendChild(imageElement);
+                itemElement.appendChild(document.createElement('br'));
+
+                const nameElement = document.createElement('span');
+                nameElement.textContent = item.name;
+                nameElement.className = 'wishlist-name';
+                itemElement.appendChild(nameElement);
+                itemElement.appendChild(document.createElement('br'));
+
+                const priceElement = document.createElement('span');
+                priceElement.textContent = `Price: Rs. ${item.price}`;
+                priceElement.className = 'wishlist-price';
+                itemElement.appendChild(priceElement);
+                itemElement.appendChild(document.createElement('br'));
+
+                const quantityElement = document.createElement('span');
+                quantityElement.textContent = `Quantity: ${item.quantity}`;
+                quantityElement.className = 'wishlist-quantity';
+                itemElement.appendChild(quantityElement);
+                itemElement.appendChild(document.createElement('br'));
+                itemElement.appendChild(document.createElement('br'));
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.style.border = 'none';
+                removeButton.style.paddingLeft = '30px';
+                removeButton.style.paddingRight = '30px';
+                removeButton.style.paddingTop = '10px';
+                removeButton.style.paddingBottom = '10px';
+                removeButton.style.borderRadius = '25px';
+                removeButton.style.backgroundColor = 'red';
+                removeButton.style.color = 'white';
+                removeButton.style.marginLeft = '45px';
+                removeButton.className = 'wishlist-remove';
+                removeButton.addEventListener('click', () => {
+                    removeItemFromWishlist(index);
+                });
+                itemElement.appendChild(removeButton);
+                itemElement.appendChild(document.createElement('br'));
+                itemElement.appendChild(document.createElement('br'));
+
+                const addtocart = document.createElement('button');
+                addtocart.textContent = 'Add to Cart';
+                addtocart.style.border = 'none';
+                addtocart.style.paddingLeft = '30px';
+                addtocart.style.paddingRight = '30px';
+                addtocart.style.paddingTop = '10px';
+                addtocart.style.paddingBottom = '10px';
+                addtocart.style.borderRadius = '25px';
+                addtocart.style.backgroundColor = 'green';
+                addtocart.style.color = 'white';
+                addtocart.style.marginLeft = '37px';
+                addtocart.style.cursor='pointer';
+                addtocart.className = 'wishlist-addtocart';
+                addtocart.addEventListener('click', () => {
+                    addtocartFunction(index);
+                });
+                itemElement.appendChild(addtocart);
+                wishlistContainer.appendChild(itemElement);
+            });
+        }
+    } else {
+        console.error('Wishlist container not found');
+    }
+});
+
+    </script>
+</body>
+</html>
